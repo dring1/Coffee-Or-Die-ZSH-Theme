@@ -1,4 +1,8 @@
-PROMPT='%{$fg_bold[red]%}☕ %{$fg_bold[green]%}%p %{$fg[cyan]%}%c %{$fg_bold[blue]%}$(git_prompt_info)%{$fg_bold[blue]%}% %{$fg[red]%} ▶ % %{$reset_color%}'
+time_enabled="%(?.%{$fg[green]%}.%{$fg[red]%})%*%{$reset_color%}"
+time_disabled="%{$fg[green]%}%*%{$reset_color%}"
+time=$time_enabled
+
+PROMPT='${time} %{$fg_bold[red]%}☕ %{$fg_bold[green]%}%p %{$fg[cyan]%}%c %{$fg_bold[blue]%}$(git_prompt_info)%{$fg_bold[blue]%}% %{$fg[red]%} ▶ % %{$reset_color%}'
 
 ZSH_THEME_GIT_PROMPT_PREFIX="("
 ZSH_THEME_GIT_PROMPT_SUFFIX=")"
